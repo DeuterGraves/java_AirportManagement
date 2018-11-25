@@ -27,13 +27,13 @@ public class AirportTest {
     public void airportHasNoHangars(){
         assertEquals(0, airport.hangarCount());
     }
-//
-//    @Test
-//    public void airportCanAddHangars(){
-//        airport.addHangar(hangar);
-//        assertEquals(1, airport.hangarCount());
-//    }
-//
+
+    @Test
+    public void airportCanAddHangars(){
+        airport.addHangar(hangar);
+        assertEquals(1, airport.hangarCount());
+    }
+
     @Test
     public void airportHasNoFlights(){
         assertEquals(0, airport.flightCount());

@@ -30,10 +30,10 @@ public class Airport {
     public int flightCount(){
         return flights.size();
     }
-//
-//    public void addHangar(HangarType){
-//        hangars.add(HangarType);
-//    }
+
+    public void addHangar(Hangar hangar){
+        hangars.add(hangar);
+    }
 
     public void addFlight(Flight flight){
         flights.add(flight);
