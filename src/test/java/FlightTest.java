@@ -6,11 +6,13 @@ import static org.junit.Assert.assertEquals;
 public class FlightTest {
 
     private Plane plane;
+    private Plane plane1;
     private Flight flight;
 
     @Before
     public void before() {
         plane = new Plane(ModelType.BOEING787, "British Airways", "A568NG");
+        plane1 = new Plane(ModelType.ARIBUS380, "British Airways", "GRS349587G");
         flight = new Flight(plane, "BA242", "Honolulu");
     }
 
@@ -38,6 +40,12 @@ public class FlightTest {
     @Test
     public void flightHasNoPassengersOnManifest(){
         assertEquals(0, flight.passengerManifestCount());
+    }
+
+    @Test
+    public void updatePlaneAssignedToFlight(){
+        flight.assignPlane(plane1);
+        assertEquals(plane1, flight.getPlane());
     }
     //    plane
 //    flight number

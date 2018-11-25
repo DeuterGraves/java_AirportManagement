@@ -35,4 +35,8 @@ public class Flight {
     public int getCapacity(){
         return plane.getCapacityFromEnum();
     }
+
+    public void assignPlane(Plane plane) {
+        this.plane = plane;
+    }
 }
