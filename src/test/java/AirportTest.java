@@ -54,10 +54,19 @@ public class AirportTest {
         assertEquals("NOT Regan National", airport.getMotto());
     }
 
+//    this might be a weird duplicated ones.
     @Test
     public void airportCanUpdatePlaneAssignedToFlight(){
         airport.assignPlane(flight, plane1);
         assertEquals(plane1, flight.getPlane());
+    }
+
+
+    @Test
+    public void airportCanFindHangarByID(){
+        airport.addHangar(hangar);
+        airport.addHangar(hangar1);
+        assertEquals(hangar1, airport.findHangar(HangarType.A2));
     }
 
 //    @Test
