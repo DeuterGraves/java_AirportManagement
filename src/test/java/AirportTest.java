@@ -75,7 +75,7 @@ public class AirportTest {
         airport.addHangar(hangar1);
         hangar.park(plane);
         hangar1.park(plane1);
-        assertEquals(plane, airport.findPlane("GSSE4562V"));
+        assertEquals(plane1, airport.findPlane("DJ763JF"));
 
     }
 

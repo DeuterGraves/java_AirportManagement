@@ -63,7 +63,7 @@ public class Airport {
                 if (plane.getRegistration() == registration){
                     return plane;
                 }
-                return null;
+
             }
         }
         return null;
