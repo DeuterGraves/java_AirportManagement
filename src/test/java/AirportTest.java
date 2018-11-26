@@ -69,6 +69,16 @@ public class AirportTest {
         assertEquals(hangar1, airport.findHangar(HangarType.A2));
     }
 
+    @Test
+    public void airportCanFindPlaneInHangars(){
+        airport.addHangar(hangar);
+        airport.addHangar(hangar1);
+        hangar.park(plane);
+        hangar1.park(plane1);
+        assertEquals(plane, airport.findPlane("GSSE4562V"));
+
+    }
+
 //    @Test
 //    public void airportCanRemovePlaneFromHangar(){
 //        airport.addHangar(hangar);

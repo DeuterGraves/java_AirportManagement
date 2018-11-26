@@ -29,6 +29,10 @@ public class Hangar {
         return;
     }
 
-//    get plane from hangar
+    public ArrayList<Plane> getPlanes() {
+        return this.planes;
+    }
+
+    //    get plane from hangar
 
 }

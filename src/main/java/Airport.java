@@ -57,6 +57,19 @@ public class Airport {
     }
 
 // search for the plane within the hangars
+    public Plane findPlane(String registration){
+        for (Hangar hangar : hangars){
+            for (Plane plane : hangar.getPlanes()){
+                if (plane.getRegistration() == registration){
+                    return plane;
+                }
+                return null;
+            }
+        }
+        return null;
+    }
+
+
 //    nested loop until you find the plane
 //    find obj then remove obj
 //    store the hangar's index and the plane's index and run remove(index OR object)
